@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// Import type từ file Types của bạn
+
 import { useAppDispatch, useAppSelector } from '../Hooks/useRedux';
 import { getDangKyKhoaHocThunk } from "../redux/reducer/DanhMucKhoaHocReducer";
 import type { RootState } from '../redux/store';
@@ -18,22 +18,21 @@ const CourseCard: React.FC<Props> = ({ course }) => {
   const handleRegisterCourse = async () => {
   const userLocal = localStorage.getItem("userLogin");
 
-  // 1. Kiểm tra nếu CHƯA đăng nhập
+ 
   if (!userLocal) {
     alert('Vui lòng đăng nhập để đăng ký khóa học');
     navigate("/login");
-    return; // Dừng hàm tại đây
+    return; 
   }
-  // 2. Nếu ĐÃ đăng nhập (nghĩa là userLocal có dữ liệu)
+  
   try {
     const userObj = JSON.parse(userLocal);
     const taiKhoan = userObj.taiKhoan;
 
-    // 3. Gọi dispatch và đợi nó chạy xong
-    // Truyền thêm navigate vào nếu Thunk của bạn cần dùng để chuyển trang
+  
     await dispatch(getDangKyKhoaHocThunk(course.maKhoaHoc, taiKhoan));
 
-    // 4. Chuyển về đúng tab khóa học để thấy kết quả ngay
+  
     navigate("/profile?tab=courses");
     
   } catch (error) {
@@ -43,7 +42,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
 
   return (
     <div className="col-12 col-sm-6 col-md-4 mb-4"> 
-      {/* Thêm col-12 và col-sm-6 để xử lý Responsive chuẩn iPhone/iPad  */}
+     
       <div className="card h-100 p-3 shadow-sm">
         <img
           src={course.hinhAnh}
