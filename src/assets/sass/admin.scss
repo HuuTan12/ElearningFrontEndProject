@@ -1,0 +1,144 @@
+// Biến màu sắc
+$primary-color: #0056b3;
+$bg-color: #f4f7f6;
+$border-color: #dee2e6;
+$text-muted: #6c757d;
+
+.admin-page {
+  background-color: $bg-color;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  // Header & Dropdown
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    .page-title {
+      color: $primary-color;
+      font-weight: 600;
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 5px;
+    }
+
+    .user-menu {
+      background: white;
+      border: 1px solid black;
+      padding: 10px;
+      min-width: 150px;
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.1); // Hiệu ứng đổ bóng cứng giống bản vẽ
+      
+      div {
+        cursor: pointer;
+        padding: 5px 0;
+        font-size: 14px;
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  // Khung Search
+  .search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    input {
+      flex: 1;
+      padding: 10px 15px;
+      border: 2px solid black;
+      font-size: 14px;
+      &:focus { outline: none; border-color: $primary-color; }
+    }
+
+    button {
+      padding: 0 25px;
+      border: 2px solid black;
+      background: white;
+      font-weight: bold;
+      transition: all 0.2s;
+      &:hover { background: #eee; }
+    }
+  }
+
+  // Bảng dữ liệu
+  .table-wrapper {
+    background: white;
+    border: 2px solid black;
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        background: #d1d1d1;
+        th {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: left;
+          font-size: 13px;
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) { background: #f9f9f9; }
+          td {
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 14px;
+            
+            .btn-group {
+              display: flex;
+              gap: 5px;
+              button {
+                padding: 2px 10px;
+                border: 2px solid black;
+                background: white;
+                font-size: 12px;
+                font-weight: bold;
+                box-shadow: 2px 2px 0px rgba(0,0,0,1);
+                &:active { transform: translate(1px, 1px); box-shadow: none; }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Phân trang (Pagination)
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+
+    .nav-link {
+      text-decoration: none;
+      color: #00a8ff;
+      font-size: 14px;
+      &:hover { text-decoration: underline; }
+    }
+
+    .page-numbers {
+      display: flex;
+      gap: 10px;
+      
+      span {
+        cursor: pointer;
+        color: #00a8ff;
+        &.active {
+          border: 2px solid #0056b3;
+          padding: 2px 8px;
+          font-weight: bold;
+          color: #0056b3;
+        }
+      }
+    }
+  }
+}
