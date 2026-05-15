@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import type { CourseFormData } from "../../Types";
 import { useAppDispatch, useAppSelector } from "../../Hooks/useRedux";
 import { getApiDanhMucKhoaHocThunk } from "../../redux/reducer/DanhMucKhoaHocReducer";
@@ -12,6 +12,8 @@ interface Props {
   onSubmitCourse: (data: CourseFormData) => void;
   editingCourse: Course | null;
 }
+
+
 
 const FormKhoaHoc: React.FC<Props> = ({
   onClose,
@@ -226,7 +228,7 @@ const FormKhoaHoc: React.FC<Props> = ({
             </div>
           </div>
 
-          {/* CKEditor */}
+          
           <div className="mt-4">
             <label className="form-label">Mô tả</label>
 
@@ -245,7 +247,6 @@ const FormKhoaHoc: React.FC<Props> = ({
             />
           </div>
 
-          {/* Buttons */}
           <div className="d-flex justify-content-end gap-2 mt-4">
             <button
               type="button"
@@ -268,6 +269,7 @@ const FormKhoaHoc: React.FC<Props> = ({
       </div>
     </div>
   );
+  
 };
 
 export default FormKhoaHoc;
