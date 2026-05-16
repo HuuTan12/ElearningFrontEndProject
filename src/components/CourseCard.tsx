@@ -13,7 +13,7 @@ interface Props {
 const CourseCard: React.FC<Props> = ({ course }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const {userLogin} = useAppSelector((state: RootState) => state.LoginReducer);
+  
 
   const handleRegisterCourse = async () => {
   const userLocal = localStorage.getItem("userLogin");

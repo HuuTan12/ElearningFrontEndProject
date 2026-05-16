@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
+import { BrowserRouter,  Route, Routes } from "react-router-dom";
 import HomeTemplates from "./Templates/HomeTemplates";
 import UserTemplates from "./Templates/UserTemplates";
 import "./assets/sass/index.scss";

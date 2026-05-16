@@ -35,7 +35,7 @@ export const RegisterThunk = (registerdata: any, navigate: any) => {
       dispatch(setLoading(true));
       dispatch(setRegisterError(null));
 
-      const result = await httpClient.post(
+     await httpClient.post(
         "/QuanLyNguoiDung/DangKy",
         registerdata,
       );

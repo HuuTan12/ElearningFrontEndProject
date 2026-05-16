@@ -1,7 +1,7 @@
 // src/pages/Homepage/Desktop.tsx
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import useHomePage from "./useHomePage"
+import {  useNavigate } from "react-router-dom";
+
 import { useAppSelector } from "../../Hooks/useRedux";
 
 const DesktopHome: React.FC = () => {

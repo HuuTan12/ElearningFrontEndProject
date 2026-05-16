@@ -1,6 +1,6 @@
 // src/pages/Homepage/Mobile.tsx
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import useHomePage from "./useHomePage";
 
 const MobileHome: React.FC = () => {

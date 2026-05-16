@@ -8,7 +8,7 @@ import {
   cancelEnrollThunk,
   
 } from "../../redux/reducer/GhiDanhKhoaHocReducer";
-import type { UserToEnroll } from '../../redux/reducer/GhiDanhKhoaHocReducer';
+
 
 interface Props {
   onClose: () => void;
