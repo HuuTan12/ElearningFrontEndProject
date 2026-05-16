@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useAppDispatch, useAppSelector } from '../Hooks/useRedux';
+import { useAppDispatch } from '../Hooks/useRedux';
 import { getDangKyKhoaHocThunk } from "../redux/reducer/DanhMucKhoaHocReducer";
 
 import type { Course } from '../Types';
