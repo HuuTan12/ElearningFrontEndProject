@@ -138,7 +138,7 @@ export const addCourseThunk = (courseForm: CourseFormData) => {
         taiKhoanNguoiTao: userLogin.taiKhoan,
       };
 
-      const result = await httpClient.post("/QuanLyKhoaHoc/ThemKhoaHoc", data, {
+      await httpClient.post("/QuanLyKhoaHoc/ThemKhoaHoc", data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -148,7 +148,7 @@ export const addCourseThunk = (courseForm: CourseFormData) => {
 
       message.success("Thêm khóa học thành công");
     } catch (err: any) {
-      console.log(err.response?.data);
+  
 
       dispatch(
         setError(

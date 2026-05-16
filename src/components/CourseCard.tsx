@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../Hooks/useRedux';
 import { getDangKyKhoaHocThunk } from "../redux/reducer/DanhMucKhoaHocReducer";
-import type { RootState } from '../redux/store';
+
 import type { Course } from '../Types';
 
 interface Props {

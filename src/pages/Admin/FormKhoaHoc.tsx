@@ -238,7 +238,7 @@ const FormKhoaHoc: React.FC<Props> = ({
               name="moTa"
               render={({ field }) => (
                 <CKEditor
-                  editor={ClassicEditor}
+                  editor={ClassicEditor as any}
                   data={field.value}
                   onChange={(_, editor) =>
                     field.onChange(editor.getData())
